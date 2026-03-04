@@ -149,6 +149,32 @@ button:hover {
   background-color: #196619;
 }
 
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #a8ff60; /* same green as header highlights/buttons */
+  color: #000;
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 40px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+  
 @media (max-width: 768px) {
   /* Keep logo and contact info side by side */
   header {
@@ -210,6 +236,15 @@ button:hover {
   .checkbox-label {
     font-size: 14px;
     gap: 6px;
+  }
+
+    footer p {
+    font-size: 14px;
+  }
+
+  footer a {
+    display: inline-block; /* stay side by side, wrap if needed */
+    margin: 3px 5px;
   }
 }
 /* Autofill fix */
@@ -284,4 +319,12 @@ textarea:-webkit-autofill:focus {
 </script>
 
 </body>
+
+  <footer>
+  <p>&copy; 2026 Billy Goat Lawn Care. All rights reserved.</p>
+  <p>
+    <a href="mailto:billygoat@gmail.com">billygoat@gmail.com</a> | 
+    <a href="tel:+18593365656">(859)-336-5656</a>
+  </p>
+</footer>
 </html>
