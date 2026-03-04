@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Billy Goat Lawn Care</title>
+<link rel="icon" type="image/png" href="/BillyGoatLawnCare/billyGoatFavicon1.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Page background and centering */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* black page */
+  margin: 0;
+  padding: 0;
+}
+
+/* Full-width header */
+header {
+  width: 100%;
+  background-color: #2a7a2a; /* green header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px; /* bigger header height and spacing */
+  box-sizing: border-box;
+}
+
+header img {
+  height: 100px; /* larger logo */
+  width: auto;
+}
+
+header .contact-info {
+  font-size: 18px; /* bigger text */
+  color: #fff;
+}
+
+header .contact-info a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: color 0.3s;
+}
+
+header .contact-info a:hover {
+  color: #f0ff9e;
+}
+
+/* Container for form */
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto 0 auto; /* space below header */
+  text-align: center;
+}
+
+/* Form styling */
+form {
+  width: 100%;
+  padding: 40px;
+  background: #111; /* dark form background */
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+}
+
+/* Form header */
+h1 {
+  text-align: center;
+  color: #2a7a2a;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Floating labels */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 18px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  outline: none;
+  resize: none;
+  background-color: #222;
+  color: #fff;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2a7a2a;
+}
+
+.form-group textarea {
+  min-height: 160px;
+}
+
+.form-group label {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  background: #111;
+  padding: 0 5px;
+  color: #aaa;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 14px;
+  color: #2a7a2a;
+}
+
+/* Checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 14px 25px;
+  background-color: #2a7a2a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #196619;
+}
+
+@media (max-width: 768px) {
+  /* Keep logo and contact info side by side */
+  header {
+    flex-direction: row; /* stay in a row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px; /* reduce padding for small screens */
+  }
+
+  header img {
+    height: 70px; /* slightly smaller logo for mobile */
+    width: auto;
+    margin: 0; /* remove bottom margin */
+  }
+
+  header .contact-info {
+    font-size: 14px; /* slightly smaller text */
+    text-align: right;
+    white-space: nowrap; /* keep email and phone on one line */
+  }
+
+  header .contact-info a {
+    margin-left: 6px; /* smaller spacing between links */
+    display: inline; /* stay side by side */
+  }
+
+  /* Form container */
+  .container {
+    margin: 20px auto 0 auto;
+    padding: 0 15px;
+  }
+
+  form {
+    padding: 30px 20px;
+  }
+
+  /* Inputs & buttons smaller */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+    padding: 12px 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+    gap: 6px;
+  }
+  
+  /* Shrink form on small screens */
+.container form {
+  max-width: 100%; /* make sure it doesn't overflow */
+  width: 90%;      /* leave small padding on sides */
+  margin: 0 auto;  /* center it */
+}
+
+.form-group input,
+.form-group textarea {
+  font-size: 16px;
+  padding: 12px 10px; /* smaller on mobile */
+}
+}
+
+/* Autofill fix */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #222 inset;
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<!-- Full width header -->
+<header>
+    <img src="/BillyGoatLawnCare/billyGoatLogo.png" alt="Billy Goat Lawn Care Logo">
+    <div class="contact-info">
+        <a href="mailto:billygoat@gmail.com">billygoat@gmail.com</a> | 
+        <a href="tel:+18593365656">(859)-336-5656</a>
+    </div>
+</header>
+
+<!-- Form container -->
+<div class="container">
+  <h1>Contact Us</h1>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact">
+
+    <div class="form-group">
+      <input type="text" name="name" placeholder=" " autocomplete="off" required pattern="[A-Za-zÀ-ÿ' -]+" title="Name can only contain letters, spaces, hyphens, and apostrophes.">
+      <label>Name</label>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" placeholder=" " autocomplete="off" required>
+      <label>Email</label>
+    </div>
+
+    <div class="form-group">
+      <textarea name="message" placeholder=" " required></textarea>
+      <label>Message</label>
+    </div>
+
+    <label class="checkbox-label">
+      <input type="checkbox" name="email_signup" value="yes">
+      Sign up for our email list for updates, promotions, and more.
+    </label>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+  // Name input: restrict invalid characters + auto-capitalize
+  const nameInput = document.querySelector('input[name="name"]');
+  nameInput.addEventListener('input', function () {
+    this.value = this.value
+      .replace(/[^A-Za-zÀ-ÿ' -]/g, '')
+      .replace(/\b\w/g, char => char.toUpperCase());
+  });
+
+  // Email input: remove spaces + lowercase
+  const emailInput = document.querySelector('input[name="email"]');
+  emailInput.addEventListener('input', function() {
+    this.value = this.value.replace(/\s/g, '').toLowerCase();
+  });
+</script>
+
+</body>
+</html>
