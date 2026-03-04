@@ -41,10 +41,6 @@ header .contact-info a {
   margin-left: 12px;
   transition: color 0.3s;
 }
-
-header .contact-info a:hover {
-  color: #f0ff9e;
-}
   
 .hero {
   text-align: center;
@@ -70,11 +66,6 @@ header .contact-info a:hover {
   border-radius: 8px;
   margin-top: 20px;
   transition: 0.3s ease;
-}
-
-.quote-button:hover {
-  background-color: #000000;
-  transform: translateY(-2px);
 }
 
 .services {
@@ -115,11 +106,6 @@ header .contact-info a:hover {
 .service-card.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  background-color: #000000;
 }
 
 .service-card h3 {
@@ -257,13 +243,9 @@ footer a {
   text-decoration: none;
   margin: 0 5px;
 }
-
-footer a:hover {
-  color: #f0ff9e;
-}
   
 @media (max-width: 768px) {
-
+  
   /* Header layout */
   header {
     padding: 20px 15px;
@@ -338,6 +320,28 @@ footer a:hover {
     display: inline-block;
     margin: 3px 5px;
   }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    background-color: #000000;
+  }
+
+  .quote-button:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+  }
+
+  header .contact-info a:hover {
+    color: #f0ff9e;
+  }
+
+  footer a:hover {
+    color: #f0ff9e;
+  }
+
 }
 /* Autofill fix */
 input:-webkit-autofill,
