@@ -8,10 +8,12 @@
 <meta name="keywords" content="Lawn Care Bardstown, Lawn Mowing Bardstown KY, Yard Maintenance Bardstown">
 <meta name="description" content="Billy Goat Lawn Care provides reliable lawn mowing, edging, and yard maintenance services in Bardstown, Kentucky. Get your free quote today.">
 <style>
-/* Page background and centering */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #000; /* black page */
+/* ==============================
+   GLOBAL
+============================== */
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -20,101 +22,108 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  position: relative;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
-/* Full-width header */
+section {
+  padding: 80px 20px;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
 header {
   width: 100%;
-  background-color: #2a7a2a; /* green header */
+  background-color: #2a7a2a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 50px; /* bigger header height and spacing */
-  box-sizing: border-box;
+  padding: 30px 50px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 header img {
-  height: 100px; /* larger logo */
-  width: auto;
+  height: 100px;
 }
 
-header .contact-info {
-  font-size: 18px; /* bigger text */
-  color: #fff;
+.contact-info {
+  font-size: 18px;
 }
 
-header .contact-info a {
+.contact-info a {
   color: #fff;
   text-decoration: none;
   margin-left: 12px;
-  transition: color 0.3s;
+  transition: 0.3s ease;
 }
-  
+
+/* ==============================
+   HERO
+============================== */
+
 .hero {
   text-align: center;
-  padding: 120px 20px 100px 20px;
-  color: #fff;
+  padding: 120px 20px 100px;
   background: linear-gradient(to bottom, #000, #0d0d0d);
 }
 
 .hero h1 {
   font-size: 48px;
-  margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 .quote-button {
   display: inline-block;
   background: linear-gradient(135deg, #2a7a2a, #1f5f1f);
-  color: #fff;
   padding: 16px 36px;
+  border-radius: 50px;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 50px; /* pill shape looks more premium */
-  margin-top: 25px;
-  box-shadow: 0 8px 20px rgba(42, 122, 42, 0.4);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(42,122,42,0.4);
   transition: 0.3s ease;
 }
 
-.services {
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-}
+/* ==============================
+   SERVICES
+============================== */
 
-  .services {
+.services {
+  background-color: #111;
   text-align: center;
-  padding: 60px 20px;
-  background-color: #111; /* dark background */
-  color: white;
 }
 
 .services h2 {
   font-size: 32px;
-  margin-bottom: 40px;
-  color: #fff;
+  margin-bottom: 50px;
 }
 
 .service-grid {
-  display: flex;
-  flex-direction: column;  /* stack vertically */
-  gap: 30px;
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .service-card {
   background: linear-gradient(145deg, #2a7a2a, #1f5f1f);
   padding: 35px 25px;
   border-radius: 14px;
-  transition: 0.6s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   opacity: 0;
   transform: translateY(40px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.6s ease;
 }
 
 .service-card.show {
@@ -123,94 +132,85 @@ header .contact-info a {
 }
 
 .service-card h3 {
-  color: #fff;
   margin-bottom: 15px;
 }
 
 .service-card p {
-  color: #fff;
-  margin-bottom: 15px;
+  font-size: 16px;
 }
 
+/* ==============================
+   ABOUT
+============================== */
+
 .about-us {
+  background-color: #000;
   text-align: center;
-  padding: 60px 20px;
-  background-color: #000; /* slightly darker than services */
-  color: #fff;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
 }
 
 .about-us h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  color: #fff;
 }
 
 .about-us p {
   max-width: 800px;
   margin: 0 auto;
   font-size: 18px;
-  line-height: 1.6;
   color: #ccc;
 }
 
+/* ==============================
+   WHY US
+============================== */
+
 .why-us {
-  text-align: center;
-  padding: 60px 20px;
   background-color: #111;
-  color: #fff;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
+  text-align: center;
 }
 
 .why-us h2 {
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .why-us ul {
   list-style: none;
-  padding: 0;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .why-us li {
-  margin-bottom: 18px;
+  padding: 14px 0;
   font-size: 18px;
   color: #ccc;
-  padding: 10px 0;
   border-bottom: 1px solid #222;
 }
-  
-/* Container for form */
+
+/* ==============================
+   CONTACT FORM
+============================== */
+
 .container {
-  width: 100%;
   max-width: 700px;
-  margin: 40px auto 0 auto; /* space below header */
+  margin: 80px auto 0;
+  padding: 0 20px;
   text-align: center;
 }
 
-/* Form styling */
-form {
-  width: 100%;
-  padding: 40px;
-  background: #111; /* dark form background */
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  box-sizing: border-box;
-}
-
-/* Form header */
 .container h1 {
-  text-align: center;
+  font-size: 36px;
   color: #2a7a2a;
   margin-bottom: 40px;
-  font-size: 36px;
 }
 
-/* Floating labels */
+form {
+  background: #111;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
 .form-group {
   position: relative;
   margin-bottom: 25px;
@@ -223,11 +223,11 @@ form {
   font-size: 18px;
   border: 1px solid #555;
   border-radius: 6px;
-  outline: none;
-  resize: none;
   background-color: #222;
   color: #fff;
-  transition: border 0.3s;
+  outline: none;
+  resize: none;
+  transition: border 0.3s ease;
 }
 
 .form-group input:focus,
@@ -241,13 +241,13 @@ form {
 
 .form-group label {
   position: absolute;
-  left: 12px;
   top: 14px;
-  background: #111;
+  left: 12px;
   padding: 0 5px;
+  background: #111;
   color: #aaa;
-  transition: 0.2s ease;
   pointer-events: none;
+  transition: 0.2s ease;
 }
 
 .form-group input:focus + label,
@@ -259,163 +259,132 @@ form {
   color: #2a7a2a;
 }
 
-/* Checkbox */
 .checkbox-label {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-bottom: 30px;
   font-size: 16px;
-  justify-content: center;
-  color: #fff;
+  margin-bottom: 30px;
 }
 
-/* Submit button */
 button {
   width: 100%;
-  padding: 14px 25px;
-  background-color: #2a7a2a;
-  color: #fff;
+  padding: 14px;
+  font-size: 18px;
   border: none;
   border-radius: 6px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #196619;
-}
-
-/* Footer styling */
-footer {
-  width: 100%;
-  background-color: #2a7a2a; /* same green as header highlights/buttons */
+  background-color: #2a7a2a;
   color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  background-color: #2a7a2a;
   text-align: center;
-  padding: 20px 15px;
-  margin-top: 40px;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  padding: 25px 15px;
+  margin-top: 60px;
 }
 
 footer p {
   margin: 5px 0;
-  color: #fff;
 }
 
 footer a {
   color: #fff;
   text-decoration: none;
   margin: 0 5px;
+  transition: 0.3s ease;
 }
-  
+
+/* ==============================
+   HOVER EFFECTS (Desktop Only)
+============================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .service-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .quote-button:hover {
+    transform: translateY(-3px);
+  }
+
+  button:hover {
+    background-color: #196619;
+  }
+
+  .contact-info a:hover,
+  footer a:hover {
+    color: #f0ff9e;
+  }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
 @media (max-width: 768px) {
-  
-  /* Header layout */
+
   header {
     padding: 20px 15px;
-    align-items: center;
   }
 
   header img {
     height: 70px;
-    width: auto;
-    margin: 0;
   }
 
-  header .contact-info {
+  .contact-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 8px;            /* 👈 increased spacing */
+    gap: 8px;
     font-size: 14px;
-    max-width: 55%;
     text-align: right;
-    line-height: 1.4;
-  }
-
-  header .contact-info a {
-    margin-left: 0;      /* remove leftover spacing */
   }
 
   .separator {
-    display: none;       /* hide | on mobile */
+    display: none;
   }
 
-  /* Form container */
-  .container {
-    margin: 20px auto 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .container h1 {
+    font-size: 28px;
   }
 
   form {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 25px;
   }
 
   .form-group input,
   .form-group textarea {
     font-size: 16px;
-    padding: 12px 10px;
   }
 
   button {
     font-size: 16px;
-    padding: 12px 20px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  .checkbox-label {
-    font-size: 14px;
-    gap: 6px;
   }
 
   footer p {
     font-size: 14px;
   }
-
-  footer a {
-    display: inline-block;
-    margin: 3px 5px;
-  }
 }
 
-@media (hover: hover) and (pointer: fine) {
+/* ==============================
+   AUTOFILL FIX
+============================== */
 
-  .service-card:hover {
-    transform: translateY(-5px);
-    background-color: #000000;
-  }
-
-  .quote-button:hover {
-    background-color: #000000;
-    transform: translateY(-2px);
-  }
-
-  header .contact-info a:hover {
-    color: #f0ff9e;
-  }
-
-  footer a:hover {
-    color: #f0ff9e;
-  }
-
-}
-/* Autofill fix */
 input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus {
+textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #222 inset;
   -webkit-text-fill-color: #fff;
   transition: background-color 5000s ease-in-out;
