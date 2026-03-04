@@ -45,6 +45,11 @@ header .contact-info a {
 header .contact-info a:hover {
   color: #f0ff9e;
 }
+  .hero {
+  text-align: center;
+  padding: 60px 20px 30px 20px;
+  color: #fff;
+}
 
   .quote-button {
   text-align: center;
@@ -79,10 +84,10 @@ header .contact-info a:hover {
 }
 
 .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
+  display: flex;
+  flex-direction: column;  /* stack vertically */
+  gap: 30px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -90,7 +95,14 @@ header .contact-info a:hover {
   background-color: #2a7a2a;
   padding: 30px 20px;
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .service-card:hover {
@@ -335,21 +347,28 @@ textarea:-webkit-autofill:focus {
     </div>
 </header>
 
-  <h1>Reliable Lawn Care in Bardstown</h1>
-  <a href="#contact" class="quote-button">Get a Free Quote Today</a>
-
-  <div class="service-grid">
-    <h2>Our Services</h2>
-    <div class="service-card">
-      <h3>Lawn Mowing</h3>
-      <p>Professional mowing with clean edges and consisten results.</p>
-    </div>
-
-    <div class="service-card">
-      <h3>Weedeating & Edging</h3>
-      <p>Clean lines around driveways, sidewalks, and flower beds.</p>
-    </div>
+  <div class="hero">
+    <h1>Reliable Lawn Care in Bardstown</h1>
+    <a href="#contact" class="quote-button">Get a Free Quote Today</a>
   </div>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      
+      <div class="service-card">
+        <h3>Lawn Mowing</h3>
+        <p>Professional mowing with clean edges and consisten results.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Weedeating & Edging</h3>
+        <p>Clean lines around driveways, sidewalks, and flower beds.</p>
+      </div>
+      
+    </div>
+  </section>
+  
   <!-- Form container -->
 <div class="container" id="contact">
   <h1>Contact Us</h1>
@@ -381,6 +400,15 @@ textarea:-webkit-autofill:focus {
   </form>
 </div>
 
+<footer>
+  <p>&copy; 2026 Billy Goat Lawn Care. All rights reserved.</p>
+  <p>
+    <a href="mailto:billygoat@gmail.com">billygoat@gmail.com</a> | 
+    <a href="tel:+18593365656">(859)-336-5656</a> |
+    <a>Bardstown</a>
+  </p>
+</footer>
+
 <script>
   // Name input: restrict invalid characters + auto-capitalize
   const nameInput = document.querySelector('input[name="name"]');
@@ -395,16 +423,23 @@ textarea:-webkit-autofill:focus {
   emailInput.addEventListener('input', function() {
     this.value = this.value.replace(/\s/g, '').toLowerCase();
   });
+  const cards = document.querySelectorAll('.service-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
 </script>
 
 </body>
 
-  <footer>
-  <p>&copy; 2026 Billy Goat Lawn Care. All rights reserved.</p>
-  <p>
-    <a href="mailto:billygoat@gmail.com">billygoat@gmail.com</a> | 
-    <a href="tel:+18593365656">(859)-336-5656</a> |
-    <a>Bardstown</a>
-  </p>
-</footer>
 </html>
