@@ -74,6 +74,7 @@ header .contact-info a:hover {
 .services h2 {
   font-size: 32px;
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .service-grid {
@@ -85,7 +86,7 @@ header .contact-info a:hover {
 }
 
 .service-card {
-  background-color: #1c1c1c;
+  background-color: #2a7a2a;
   padding: 30px 20px;
   border-radius: 10px;
   transition: 0.3s ease;
@@ -93,11 +94,11 @@ header .contact-info a:hover {
 
 .service-card:hover {
   transform: translateY(-5px);
-  background-color: #222;
+  background-color: #f0ff9e;
 }
 
 .service-card h3 {
-  color: #a8ff60;
+  color: #fff;
   margin-bottom: 15px;
 }
 
@@ -331,10 +332,6 @@ textarea:-webkit-autofill:focus {
   <h1>Reliable Lawn Care in Bardstown</h1>
   <a href="#contact" class="quote-button">Get a Free Quote Today</a>
 
-<!-- Form container -->
-<div class="container" id="contact">
-  <h1>Contact Us</h1>
-
   <div class="service-grid">
     <h2>Our Services</h2>
     <div class="service-card">
@@ -347,6 +344,9 @@ textarea:-webkit-autofill:focus {
       <p>Clean lines around driveways, sidewalks, and flower beds.</p>
     </div>
   </div>
+  <!-- Form container -->
+<div class="container" id="contact">
+  <h1>Contact Us</h1>
 
   <form name="contact" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contact">
