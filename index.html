@@ -16,6 +16,14 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+}
+
 /* Full-width header */
 header {
   width: 100%;
@@ -25,6 +33,7 @@ header {
   align-items: center;
   padding: 30px 50px; /* bigger header height and spacing */
   box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 header img {
@@ -46,27 +55,29 @@ header .contact-info a {
   
 .hero {
   text-align: center;
-  padding: 80px 20px 60px 20px;
+  padding: 120px 20px 100px 20px;
   color: #fff;
-  background: linear-gradient(to bottom, #000, #111);
+  background: linear-gradient(to bottom, #000, #0d0d0d);
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
   margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-  .quote-button {
-  text-align: center;
+.quote-button {
   display: inline-block;
-  background-color: #2a7a2a; /* your green */
+  background: linear-gradient(135deg, #2a7a2a, #1f5f1f);
   color: #fff;
-  padding: 15px 30px;
+  padding: 16px 36px;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 50px; /* pill shape looks more premium */
+  margin-top: 25px;
+  box-shadow: 0 8px 20px rgba(42, 122, 42, 0.4);
   transition: 0.3s ease;
 }
 
@@ -97,12 +108,13 @@ header .contact-info a {
 }
 
 .service-card {
-  background-color: #2a7a2a;
-  padding: 30px 20px;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #2a7a2a, #1f5f1f);
+  padding: 35px 25px;
+  border-radius: 14px;
   transition: 0.6s ease;
   opacity: 0;
   transform: translateY(40px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .service-card.show {
@@ -165,9 +177,11 @@ header .contact-info a {
 }
 
 .why-us li {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   font-size: 18px;
   color: #ccc;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
 }
   
 /* Container for form */
