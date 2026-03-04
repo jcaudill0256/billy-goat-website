@@ -152,37 +152,43 @@ button:hover {
 @media (max-width: 768px) {
   /* Keep logo and contact info side by side */
   header {
-    flex-direction: row; /* stay in a row */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px; /* reduce padding for small screens */
+    padding: 20px 15px;
   }
 
   header img {
-    height: 70px; /* slightly smaller logo for mobile */
+    height: 70px;
     width: auto;
-    margin: 0; /* remove bottom margin */
+    margin: 0;
   }
 
   header .contact-info {
-    font-size: 14px; /* slightly smaller text */
+    font-size: 14px;
     text-align: right;
-    white-space: nowrap; /* keep email and phone on one line */
+    white-space: nowrap;
   }
 
   header .contact-info a {
-    margin-left: 6px; /* smaller spacing between links */
-    display: inline; /* stay side by side */
+    margin-left: 6px;
+    display: inline;
   }
 
   /* Form container */
   .container {
     margin: 20px auto 0 auto;
-    padding: 0 15px;
+    padding: 0 10px; /* reduce side padding */
+    box-sizing: border-box;
   }
 
+  /* Form adjustments */
   form {
-    padding: 30px 20px;
+    width: 100%;
+    max-width: 360px; /* narrower on mobile to avoid horizontal scroll */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   /* Inputs & buttons smaller */
@@ -205,21 +211,7 @@ button:hover {
     font-size: 14px;
     gap: 6px;
   }
-  
-  /* Shrink form on small screens */
-.container form {
-  max-width: 100%; /* make sure it doesn't overflow */
-  width: 90%;      /* leave small padding on sides */
-  margin: 0 auto;  /* center it */
 }
-
-.form-group input,
-.form-group textarea {
-  font-size: 16px;
-  padding: 12px 10px; /* smaller on mobile */
-}
-}
-
 /* Autofill fix */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
